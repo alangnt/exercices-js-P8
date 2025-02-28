@@ -1,4 +1,21 @@
-// Créez votre fonction ici
+function calculate(x, y, op) {
+	x = Number(x);
+	y = Number(y);
+	
+	switch (op) {
+		case '+':
+			return x + y;
+		case '-':
+			return x - y;
+		case '*':
+			return x * y;
+		case '/':
+			if (y === 0) return 'Division by zero is not allowed';
+			return x / y;
+		default:
+			return 'Invalid operator';
+	}
+}
 
 // Exemples d'utilisation de la fonction
 console.log(calculate(5, 3, '+'));   // Affiche 8
